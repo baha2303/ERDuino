@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "281865172355",
+    "firebase_url": "https://eruino-1b4be.firebaseio.com",
+    "project_id": "eruino-1b4be",
+    "storage_bucket": "eruino-1b4be.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:281865172355:android:bc11e5bf1f5b1db26872b6",
+        "android_client_info": {
+          "package_name": "com.example.eruino"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "281865172355-egnojganchkvfriujjkdninbqto4e6bl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.eruino",
+            "certificate_hash": "23706f56e6ab578311ec25d7d4ba6fc21b4910c5"
+          }
+        },
+        {
+          "client_id": "281865172355-j4bmgo0kn6agmqern1mffjgi6bj65dm6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC26_qe6I1ElPp4AELG-B4Mr7-PG_hGiQc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "281865172355-j4bmgo0kn6agmqern1mffjgi6bj65dm6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
