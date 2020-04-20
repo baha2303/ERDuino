@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "default": "fir-demo-project",
+    "staging": "fir-demo-project"
+  }
+}

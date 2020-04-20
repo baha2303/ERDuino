@@ -4,19 +4,99 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
     tools:context=".ui.home.HomeFragment">
 
-    <TextView
-        android:id="@+id/text_home"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <Switch
+        android:id="@+id/travelMode"
+        android:layout_width="142dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/travel_mode"
+        android:thumbTint="@color/fui_bgAnonymous"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/contactsButton" />
+
+    <Switch
+        android:id="@+id/ventsMode"
+        android:layout_width="142dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/vents_mode"
+        android:thumbTint="@color/fui_bgAnonymous"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/windowSwitch" />
+
+    <Button
+        android:id="@+id/infoButton"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="190dp"
+        android:layout_height="190dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/colorAccent"
+        android:text="@string/informations_button"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/tipsButton"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="190dp"
+        android:layout_height="190dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="@color/fui_bgAnonymous"
+        android:text="@string/tips_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/infoButton"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/sensorsButton"
+        android:layout_width="190dp"
+        android:layout_height="190dp"
+        android:layout_marginStart="16dp"
+        android:backgroundTint="@android:color/holo_purple"
+        android:text="@string/sensors"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/infoButton" />
+
+    <Button
+        android:id="@+id/contactsButton"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="190dp"
+        android:layout_height="190dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="@android:color/darker_gray"
+        android:text="EMERGENCY CONTACTS"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/sensorsButton"
+        app:layout_constraintTop_toBottomOf="@+id/tipsButton" />
+
+    <Switch
+        android:id="@+id/windowSwitch"
+        android:layout_width="142dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/window_mode"
+        android:thumbTint="@android:color/holo_orange_light"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/travelMode" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="190dp"
+        android:layout_height="190dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/mr_cast_meta_black_scrim"
+        android:src="@drawable/emergency"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sensorsButton" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

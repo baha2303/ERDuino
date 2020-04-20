@@ -28,4 +28,14 @@
     <string name="home_second">Home Second</string>
     <string name="menu_logout">Logout</string>
     <string name="menu_help">Help</string>
+
+    <string name="travel_mode">Travel Mode</string>
+    <string name="vents_mode">Vents Mode</string>
+    <string name="window_mode">Windows</string>
+    <string name="informations_button">Info</string>
+    <string name="tips_button">Tips</string>
+    <string name="police_button">Call Police</string>
+    <string name="sensors_button">Sensors</string>
+    <string name="sensors">Sensors</string>
+
 </resources>

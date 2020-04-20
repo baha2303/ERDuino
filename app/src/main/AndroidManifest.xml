@@ -12,6 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".mainLogout"></activity>
+        <activity android:name=".SensorsActivity"
+            android:parentActivityName=".navigationDrawer"></activity>
+        <activity android:name=".tipsActivity"
+            android:parentActivityName=".navigationDrawer"/>
+        <activity android:name=".informations_activity"
+            android:parentActivityName=".navigationDrawer"/>
         <activity android:name=".mainHelp" />
         <activity
             android:name=".navigationDrawer"
