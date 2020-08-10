@@ -1,20 +1,24 @@
 package com.example.eruino;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
-
-
 import com.firebase.ui.auth.AuthUI;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-
+import com.google.firebase.database.ValueEventListener;
 import java.util.Arrays;
 import java.util.List;
 
@@ -26,12 +30,24 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
     //get's us the root of the database
     DatabaseReference mRootRef = FirebaseDatabase.getInstance().getReference();
 
+    private static final String CHANNEL_ID = "notif";
+    private static final String CHANNEL_NAME = "notif";
+    private static final String CHANNEL_DESCRIPTION = "Android Notification";
+
+    DatabaseReference water = mRootRef.child("sensors/waterSensor");
+    DatabaseReference gas = mRootRef.child("sensors/gasSensor");
+    DatabaseReference flame  =  mRootRef.child("sensors/flameSensor");
+    DatabaseReference motion  =  mRootRef.child("sensors/motionSensor");
+
+
+
     // Write a message to the database
     public static final String EXTRA_MESSAGE = "com.example.eruino.MESSAGE";
     DatabaseReference mConditionRef = mRootRef.child("condition");
     DatabaseReference mMessageRef = mRootRef.child("message");
-    DatabaseReference mUser1 = mRootRef.child("users/user:1/phone");
+
     DatabaseReference mUser2 = mRootRef.child("users/user:2/phone");
+
     //private Button mButton = (Button) findViewById(R.id.sendData);
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,9 +60,16 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
         //
         mAuth = FirebaseAuth.getInstance();
         if(mAuth.getCurrentUser() != null) {
-           signOut();
+           //signOut();
         }
+
     }
+
+
+
+
+
+
 
     @Override
     protected void onStart() {
@@ -61,12 +84,11 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
     protected void onRestart() {
         super.onRestart();
         if(mAuth.getCurrentUser() != null) {
-            signOut();
+            //signOut();
         }
         //updateUI(mAuth.getCurrentUser());
 
     }
-
     /**
 
     public void sendMessage(View view) {

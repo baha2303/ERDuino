@@ -8,9 +8,13 @@
 
     <TextView
         android:id="@+id/tipsView"
-        android:layout_width="185dp"
-        android:layout_height="115dp"
-        android:layout_marginTop="100dp"
+        android:layout_width="361dp"
+        android:layout_height="679dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

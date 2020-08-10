@@ -29,15 +29,7 @@ public class MainHelpFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
         View view =  inflater.inflate(R.layout.main_help_fragment, container, false);
-
-
-        Button btn = view.findViewById(R.id.button);
-        btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //startActivity(new Intent(getContext(),));
-            }
-        });
+        
 
         return view;
     }

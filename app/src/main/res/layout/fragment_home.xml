@@ -10,7 +10,7 @@
     <Switch
         android:id="@+id/travelMode"
         android:layout_width="142dp"
-        android:layout_height="62dp"
+        android:layout_height="27dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:text="@string/travel_mode"
@@ -21,8 +21,8 @@
     <Switch
         android:id="@+id/ventsMode"
         android:layout_width="142dp"
-        android:layout_height="62dp"
-        android:layout_marginTop="8dp"
+        android:layout_height="27dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:text="@string/vents_mode"
         android:thumbTint="@color/fui_bgAnonymous"
@@ -71,7 +71,7 @@
         android:layout_width="190dp"
         android:layout_height="190dp"
         android:layout_marginEnd="16dp"
-        android:backgroundTint="@android:color/darker_gray"
+        android:backgroundTint="@android:color/holo_green_dark"
         android:text="EMERGENCY CONTACTS"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/sensorsButton"
@@ -80,23 +80,62 @@
     <Switch
         android:id="@+id/windowSwitch"
         android:layout_width="142dp"
-        android:layout_height="62dp"
-        android:layout_marginTop="8dp"
+        android:layout_height="27dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:text="@string/window_mode"
         android:thumbTint="@android:color/holo_orange_light"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/travelMode" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="190dp"
-        android:layout_height="190dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:backgroundTint="@color/mr_cast_meta_black_scrim"
-        android:src="@drawable/emergency"
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imageView2"
+        android:layout_width="409dp"
+        android:layout_height="77dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:elevation="6dp"
+        android:src="@drawable/logo"
+        app:civ_border_color="@color/colorAccent"
+        app:civ_border_width="6dp"
+         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"/>
+<!--        android:id="@+id/imageView2"-->
+<!--        android:layout_width="409dp"-->
+<!--        android:layout_height="77dp"-->
+<!--        android:src="@drawable/logo"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.5"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:srcCompat="@drawable/logo"-->
+<!--        tools:srcCompat="@drawable/logo" />-->
+
+
+
+    <Button
+        android:id="@+id/erButton"
+        android:layout_width="182dp"
+        android:layout_height="178dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginBottom="140dp"
+        android:background="@drawable/emergency"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sensorsButton" />
+        app:layout_constraintTop_toBottomOf="@+id/sensorsButton"
+        tools:visibility="visible" />
+
+    <Switch
+        android:id="@+id/liftSwitch"
+        android:layout_width="142dp"
+        android:layout_height="27dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="Lift"
+        android:thumbTint="@color/fui_bgAnonymous"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ventsMode" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

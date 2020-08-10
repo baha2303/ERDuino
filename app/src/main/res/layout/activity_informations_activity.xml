@@ -8,10 +8,32 @@
 
     <TextView
         android:id="@+id/InformationView"
-        android:layout_width="202dp"
-        android:layout_height="66dp"
-        android:layout_marginTop="100dp"
+        android:layout_width="350dp"
+        android:layout_height="317dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="8dp"
+        android:textAlignment="textStart"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="436dp"
+        android:layout_height="248dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.545"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/help" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="450dp"
+        android:layout_height="213dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView3"
+        app:srcCompat="@drawable/kobe"
+        tools:layout_editor_absoluteX="-6dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
